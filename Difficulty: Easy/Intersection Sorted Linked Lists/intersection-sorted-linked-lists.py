@@ -10,25 +10,22 @@ class Node:
 '''
 class Solution:
     def findIntersection(self, head1, head2):
-        elements = {}
-
-        dummy = Node(0)
+        dummy = Node(0)  # Dummy node to store intersection list
         curr = dummy
 
-        while head1:
-            elements[head1.data] = elements.get(head1.data, 0) + 1
-            head1 = head1.next
-
-        while head2:
-            if head2.data in elements:
-                elements[head2.data] -= 1
-                if elements[head2.data] == 0:
-                    del elements[head2.data]
-                curr.next = Node(head2.data)
+        while head1 and head2:
+            if head1.data == head2.data:  # Matching element found
+                curr.next = Node(head1.data)
                 curr = curr.next
-            head2 = head2.next
+                head1 = head1.next
+                head2 = head2.next
+            elif head1.data < head2.data:  # Move head1 forward
+                head1 = head1.next
+            else:  # Move head2 forward
+                head2 = head2.next
 
-        return dummy.next
+        return dummy.next  # Return intersection list starting from dummy.next
+
 
 
 
