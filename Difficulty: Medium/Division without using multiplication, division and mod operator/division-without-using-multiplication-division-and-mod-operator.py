@@ -1,11 +1,7 @@
 # User function Template for python3
 class Solution:
     def divide(self, dividend, divisor):
-        if divisor == 0:
-            raise ValueError("Cannot divide by zero")
 
-        if dividend == -2147483648 and divisor == -1:
-            return 2147483647  
 
         negative = (dividend < 0) ^ (divisor < 0)  
         dividend, divisor = abs(dividend), abs(divisor)
