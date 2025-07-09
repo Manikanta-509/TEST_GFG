@@ -1,16 +1,18 @@
 #User function Template for python3
 
-
 class Solution:
     def kthSmallest(self, arr, k):
-        n = len(arr)
-        for i in range(n):
-            min_index = i
-            for j in range(i+1, n):
-                if arr[j] < arr[min_index]:
-                    min_index = j
-            arr[i], arr[min_index] = arr[min_index], arr[i]
-        return arr[k-1]
+        max_val = max(arr)
+        freq = [0] * (max_val + 1)
+        for num in arr:
+            freq[num] += 1
+        
+        count = 0
+        for i in range(len(freq)):
+            count += freq[i]
+            if count >= k:
+                return i
+
 
         
         
