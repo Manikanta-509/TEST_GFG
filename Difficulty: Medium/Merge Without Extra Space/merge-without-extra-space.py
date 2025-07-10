@@ -7,7 +7,6 @@ class Solution:
         if m==0:
             a.extend(b)
             return
-
         while b_ele < n and a_ele >= 0:
             if a[a_ele] > b[b_ele]:
                 a[a_ele], b[b_ele] = b[b_ele], a[a_ele]
