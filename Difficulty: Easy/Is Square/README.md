@@ -1,0 +1,11 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/is-square1846/1">Is Square</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given four different points in a 2D plane, represented by their coordinates <strong>(x1 , y1), </strong></span><strong><span style="font-size: 18.6667px;">(x2 , y2), </span></strong><span style="font-size: 18.6667px;"><strong>(x3 , y3)</strong> and </span><span style="font-size: 18.6667px;"><strong>(x4 , y4)</strong>.</span><span style="font-size: 14pt;"> The task is to determine whether these points can form a <strong>square</strong>.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong style="font-size: 18px;">Input:</strong> </span><span style="font-size: 18px;">x1 = </span><span style="font-size: 18px;">20, y1 = 10, x2 = 10, y2 = 20, 
+       x3 = 20, y3 = 20, x4 = 10, y4 = 10</span> 
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Output:</span> </strong></span><span style="font-size: 18px;">Yes</span>
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Explanation:</span> </strong></span><span style="font-size: 18px;">The points (20,10), (10,20), (20,20), (10,10) forms a square.</span></pre>
+<pre><span style="font-size: 18px;"><strong style="font-size: 18px;">Input:</strong> </span><span style="font-size: 18px;">x1 = </span><span style="font-size: 18px;">2, y1 = 1, x2 = 10, y2 = 20, 
+       x3 = 5, y3 = 6, x4 = 10, y4 = 10</span> 
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Output:</span> </strong></span><span style="font-size: 18px;">No</span>
+<span style="font-size: 18px;"><strong><span style="font-size: 18px;">Explanation:</span> </strong></span><span style="font-size: 18px;">The points (2,1), (10,20), (5,6), (10,10) doesn't form a square.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong></span><br><span style="font-size: 18px;">-10<sup>3</sup> ≤ x1, y1, x2, y2, x3, y3, x4, y4 ≤ 10<sup>3</sup></span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Zoho</code>&nbsp;<code>Amazon</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Mathematical</code>&nbsp;<code>Algorithms</code>&nbsp;
