@@ -1,8 +1,12 @@
-#User function Template for python3
-
 class Solution:
     def countSquares(self, n):
-        return int(math.sqrt(n-1))
+        count = 0
+        i = 1
+        while i * i < n:   # check until square is <= n
+            count += 1
+            i += 1
+        return count
+
         
         # code here 
 
