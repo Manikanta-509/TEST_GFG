@@ -4,7 +4,6 @@ class Solution:
         n = len(s)
         total_subsequences = (1 << n) 
         result = []
-
         for i in range(1, total_subsequences): 
             sub = ""
             for j in range(n):
