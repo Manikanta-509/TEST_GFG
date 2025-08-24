@@ -1,4 +1,6 @@
 #Back-end complete function Template for Python 3
+
+#Back-end complete function Template for Python 3
 class Solution:
     def maxSubStr(self, S):
         count0 = count1 = 0  # Count of 0s and 1s
@@ -20,16 +22,5 @@ class Solution:
 
 
 
+        #Write your code here
 
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__=="__main__":
-    for _ in range(int(input())):
-        s=input()
-        obj=Solution()
-        ans=obj.maxSubStr(s)
-        print(ans)
-        print("~")
-# } Driver Code Ends
