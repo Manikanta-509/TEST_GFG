@@ -1,21 +1,22 @@
-#User function Template for python3
-
 class Solution:
-    def findTwoElement( self,arr):
-        repated=missing=0
-        freq=[0]*(len(arr)+1)
-        for i in arr:
-            freq[i]+=1
-        for i in range(1,len(arr)+1):
-            if freq[i]==0:
-                missing=i
-            elif freq[i]>1:
-                repated=i
-        return [repated,missing]
-                
-        # code here
+    def findDuplicate(self, arr):
+        seen = set()
+        for num in arr:
+            if num in seen:
+                return num
+            seen.add(num)
+        return -1  # shouldn't happen
+
+    def findTwoElement(self, arr):
+        n = len(arr)
+        total = n * (n + 1) // 2
+        actual = sum(arr)
+
+        dup = self.findDuplicate(arr)
+        miss = dup + total - actual
+        return (dup, miss)
 
 
-
+        
         # code here
 
