@@ -1,37 +1,26 @@
 #User function Template for python3
-#User function Template for python3
-
-from itertools import permutations
 
 class Solution:
     def findPermutation(self, s):
-        # Generate all permutations
-        perm = sorted(set(''.join(p) for p in permutations(s)))
-        return perm
+        result = []
+
+        def backtrack(path, remaining):
+            if not remaining:  # no characters left → a permutation is ready
+                result.append(path)
+                return
+            
+            used = set()  # keep track of characters used at this recursion level
+            for i in range(len(remaining)):
+                if remaining[i] in used:
+                    continue  # skip duplicate characters at this level
+                used.add(remaining[i])
+                # choose remaining[i] and recurse
+                backtrack(path + remaining[i], remaining[:i] + remaining[i+1:])
+
+        backtrack("", s)
+        return result
+
+
 
         # Code here
         
-
-
-        # Code here
-        
-
-
-
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    t = int(input())
-    for i in range(t):
-        S = input()
-        ob = Solution()
-        ans = ob.findPermutation(S)
-        ans.sort()
-        for i in ans:
-            print(i, end=" ")
-        print()
-        print("~")
-
-# } Driver Code Ends
