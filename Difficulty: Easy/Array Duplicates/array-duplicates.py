@@ -1,13 +1,12 @@
 class Solution:
     def findDuplicates(self, arr):
-        seen = set()
-        duplicates = set()
-
-        for num in arr:
-            if num in seen:
-                duplicates.add(num)
+        duplicate=set()
+        seen=set()
+        for i in arr:
+            if i in seen:
+                duplicate.add(i)
             else:
-                seen.add(num)
-
-        return sorted(duplicates)
-
+                seen.add(i)
+        return list(duplicate)
+        # code here
+        
