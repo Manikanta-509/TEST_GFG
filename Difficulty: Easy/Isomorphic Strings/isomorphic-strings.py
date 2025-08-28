@@ -1,42 +1,20 @@
-#User function Template for python3
-
 class Solution:
-    
-    #Function to check if two strings are isomorphic.
-    def areIsomorphic(self,s1,s2):
-        return len(set(s1))==len(set(s2))==len(set(zip(s1,s2)))
+    def areIsomorphic(self, s1, s2):
+        m1 = {}
+        m2 = {}
 
+        for i in range(len(s1)):
 
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
+        # If character not seen before, store its
+        # first occurrence index
+            if s1[i] not in m1:
+                m1[s1[i]] = i
+            if s2[i] not in m2:
+                m2[s2[i]] = i
 
-import atexit
-import io
-import sys
-from collections import defaultdict
+        # Check if the first occurrence indices match
+            if m1[s1[i]] != m2[s2[i]]:
+                return False
 
-_INPUT_LINES = sys.stdin.read().splitlines()
-input = iter(_INPUT_LINES).__next__
-_OUTPUT_BUFFER = io.StringIO()
-sys.stdout = _OUTPUT_BUFFER
-
-
-@atexit.register
-def write():
-    sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
-
-if __name__ == '__main__':
-    t = int(input())
-    for i in range(t):
-        s = str(input())
-        p = str(input())
-        ob = Solution()
-        if (ob.areIsomorphic(s, p)):
-            print("true")
-        else:
-            print("false")
-        print("~")
-
-# } Driver Code Ends
+        return True
+        # code here 
