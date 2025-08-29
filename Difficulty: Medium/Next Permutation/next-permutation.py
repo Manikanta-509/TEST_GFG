@@ -22,24 +22,3 @@ class Solution:
                 
             
         # code here
-
-
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
-
-if __name__ == '__main__':
-    t = int(input())
-    for _ in range(t):
-        arr = input().split()
-        N = len(arr)
-        for i in range(N):
-            arr[i] = int(arr[i])
-
-        ob = Solution()
-        ob.nextPermutation(arr)
-        for i in range(N):
-            print(arr[i], end=" ")
-        print()
-
-# } Driver Code Ends
