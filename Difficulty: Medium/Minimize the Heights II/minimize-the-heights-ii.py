@@ -1,5 +1,3 @@
-#User function Template for python3
-
 class Solution:
     def getMinDiff(self, arr,k):
         arr.sort()
@@ -12,3 +10,4 @@ class Solution:
             ans=min(ans,max_ele-min_ele)
         return ans
         # code here
+        
