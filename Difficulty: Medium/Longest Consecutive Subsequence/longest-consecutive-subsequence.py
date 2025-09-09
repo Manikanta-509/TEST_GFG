@@ -1,27 +1,27 @@
- #User function Template for python3
- #User function Template for python3
- 
 class Solution:
-    
-    # arr[] : the input array
-    
-    #Function to return length of longest subsequence of consecutive integers.
-    def longestConsecutive(self,arr):
-        arr.sort()
-        current=1
-        last=0
-        for i in range(1,len(arr)):
-            if arr[i]!=arr[i-1]:
-                if arr[i]==arr[i-1]+1:
-                    current+=1
-                else:
-                    last=max(last,current)
-                    current=1
-        return max(last,current)
-            
-        
-        #code here
+    def longestConsecutive(self, arr):
+        if not arr:
+            return 0
 
-            
-        
+        arr.sort()
+        longest = 1
+        current_streak = 1
+
+        for i in range(1, len(arr)):
+            # Skip duplicates
+            if arr[i] == arr[i-1]:
+                continue
+
+            if arr[i] == arr[i-1] + 1:
+                # Consecutive element → extend streak
+                current_streak += 1
+            else:
+                # Reset streak
+                longest = max(longest, current_streak)
+                current_streak = 1
+
+        # Final update
+        longest = max(longest, current_streak)
+        return longest
+
         #code here
