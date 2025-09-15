@@ -11,7 +11,7 @@ class Solution:
             return 0
         
         # If root is in range
-        if l <= root.data <= h:
+        if root.data <= h and root.data >= l:
             return (1 
                     + self.getCount(root.left, l, h) 
                     + self.getCount(root.right, l, h))
