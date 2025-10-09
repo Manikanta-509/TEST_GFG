@@ -2,8 +2,10 @@
 
 class Solution:
 	def reverseDigits(self, n):
-	    if n<0:
-	        return -int(str(-n)[::-1].lstrip('0'))
-        else:
-            return int(str(n)[::-1].lstrip('0'))
+	    rev=0
+	    while n>0:
+	        total=n%10
+	        rev=rev*10+total
+	        n=n//10
+	    return rev
 		# Code here
