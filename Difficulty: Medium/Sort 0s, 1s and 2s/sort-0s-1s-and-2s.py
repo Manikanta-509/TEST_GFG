@@ -14,6 +14,5 @@ class Solution:
                 arr[mid],arr[high]=arr[high],arr[mid]
                 high-=1
         return arr
-                
         # code here
         
