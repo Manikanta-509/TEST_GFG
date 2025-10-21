@@ -4,13 +4,11 @@ class Solution:
     def subArrayExists(self, arr):
         sum_index_map = {}
         current_sum = 0
-
         for i in range(len(arr)):
             current_sum += arr[i]
             if current_sum == 0 or current_sum in sum_index_map:
                 return True
             sum_index_map[current_sum] = i
-        
         return False
   #Return true or false
 
