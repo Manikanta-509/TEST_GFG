@@ -1,12 +1,16 @@
 class Solution:
     def sieve(self, n):
-        primes = []
+        prime = [True] * (n + 1)
+        prime[0] = prime[1] = False
+
         for i in range(2, n + 1):
-            is_prime = True
-            for j in range(2, int(i**0.5) + 1):
-                if i % j == 0:
-                    is_prime = False
-                    break
-            if is_prime:
-                primes.append(i)
-        return primes
+            if prime[i]:
+                for j in range(i * 2, n + 1, i):
+                    prime[j] = False
+
+        ans = []
+        for i in range(2, n + 1):
+            if prime[i]:
+                ans.append(i)
+
+        return ans
