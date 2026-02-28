@@ -4,7 +4,6 @@ class Solution:
     def getTable(self,n):
         table=[]
         for i in range(1,11):
-            table.append(n*i)
+            a=n*i
+            table.append(a)
         return table
-        
-        # code here
