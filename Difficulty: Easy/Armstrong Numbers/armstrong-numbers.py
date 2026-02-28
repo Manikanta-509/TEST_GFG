@@ -2,11 +2,10 @@
 
 class Solution:
     def armstrongNumber (self, n):
-        digits=str(n)
-        a=len(digits)
-        total=sum(int(d)**a for d in digits)
+        a=str(n)
+        b=len(a)
+        total=sum(int(i)**b for i in a)
         if total==n:
             return True
         return False
-        
         # code here 
