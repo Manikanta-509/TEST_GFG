@@ -10,5 +10,4 @@ class Solution:
                 if a_cubed + b_cubed == n:
                     count += 1
         return count
-
         # code here 
