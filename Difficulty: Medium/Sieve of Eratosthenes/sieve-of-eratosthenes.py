@@ -1,16 +1,17 @@
 class Solution:
+    def isPrime(self, n):
+        if n <= 1:
+            return False
+        for i in range(2, int(n ** 0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
     def sieve(self, n):
-        prime = [True] * (n + 1)
-        prime[0] = prime[1] = False
-
+        result = []
         for i in range(2, n + 1):
-            if prime[i]:
-                for j in range(i * 2, n + 1, i):
-                    prime[j] = False
+            if self.isPrime(i):
+                result.append(i)
+        return result
+            
 
-        ans = []
-        for i in range(2, n + 1):
-            if prime[i]:
-                ans.append(i)
-
-        return ans
