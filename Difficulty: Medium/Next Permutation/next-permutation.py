@@ -1,4 +1,3 @@
-#User function Template for python3
 
 class Solution:
     def nextPermutation(self, arr):
@@ -18,6 +17,8 @@ class Solution:
         arr[pivot + 1:] = reversed(arr[pivot + 1:])
         
         return arr
+
+                
 
                 
             
