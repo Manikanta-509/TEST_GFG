@@ -1,4 +1,4 @@
-#User function Template for python3
+
 
 class Solution:
     def fact(self,n):
@@ -10,5 +10,8 @@ class Solution:
         if r>n:
             return 0
         return self.fact(n)//self.fact(n-r)
+
+        # code here
+ 
 
         # code here
