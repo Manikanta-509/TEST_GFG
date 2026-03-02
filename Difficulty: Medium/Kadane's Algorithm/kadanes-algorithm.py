@@ -1,16 +1,8 @@
 class Solution:
     def maxSubarraySum(self, arr):
-        left = right = arr[0]   # initialize with first element
-
-        for i in range(1, len(arr)):
-            # left = max(arr[i], arr[i] + left)
-            if arr[i] > arr[i] + left:
-                left = arr[i]
-            else:
-                left = arr[i] + left
-
-            # right = max(right, left)
-            if right < left:
-                right = left
-
-        return right
+        max_ele=min_ele=arr[0]
+        for i in range(1,len(arr)):
+            max_ele=max(arr[i],max_ele+arr[i])
+            min_ele=max(max_ele,min_ele)
+        return min_ele
+        # Code here
