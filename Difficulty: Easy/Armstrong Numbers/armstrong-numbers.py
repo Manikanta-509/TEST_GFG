@@ -4,8 +4,7 @@ class Solution:
     def armstrongNumber (self, n):
         a=str(n)
         b=len(a)
-        total=sum(int(i)**b for i in a)
-        if total==n:
+        c=sum(int(i)**b for i in a)
+        if c==n:
             return True
         return False
-        # code here 
