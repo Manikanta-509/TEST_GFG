@@ -1,4 +1,3 @@
-
 class Solution:
     def rearrange(self, arr):
         arr.sort()
@@ -18,5 +17,7 @@ class Solution:
             j-=1
         for i in range(n):
             arr[i]=result[i]
-
-            
+        return result
+        
+        
+        # code here
