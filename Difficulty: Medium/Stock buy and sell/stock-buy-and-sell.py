@@ -15,3 +15,5 @@ class Solution:
             sell = i - 1
             result += arr[sell] - arr[buy]
         return result
+	       
+        # code here
