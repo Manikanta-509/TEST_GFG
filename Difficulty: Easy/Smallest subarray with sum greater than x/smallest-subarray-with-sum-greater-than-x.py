@@ -16,24 +16,7 @@ class Solution:
         # Your code goes here 
         
 
-
-
-#{ 
- # Driver Code Starts
-def main():
-
-    T = int(input())
-
-    while (T > 0):
-        x = int(input())
-        a = [int(x) for x in input().strip().split()]
-        print(Solution().smallestSubWithSum(x, a))
-
-        T -= 1
-        print("~")
-
-
-if __name__ == "__main__":
-    main()
-
-# } Driver Code Ends
+   
+            
+        # Your code goes here 
+        
