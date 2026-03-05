@@ -1,22 +1,19 @@
 class Solution:
-    def findDuplicate(self, arr):
+    def duplicates(self, arr):
         seen = set()
-        for num in arr:
-            if num in seen:
-                return num
-            seen.add(num)
-        return -1  # shouldn't happen
+        for i in arr:
+            if i in seen:
+                return i
+            seen.add(i)
 
     def findTwoElement(self, arr):
         n = len(arr)
+        duplicate = self.duplicates(arr)
+
         total = n * (n + 1) // 2
-        actual = sum(arr)
+        missing = total - (sum(arr) - duplicate)
 
-        dup = self.findDuplicate(arr)
-        miss = dup + total - actual
-        return (dup, miss)
-
-
+        return [duplicate, missing]
         
         # code here
 
