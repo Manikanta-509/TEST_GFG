@@ -12,3 +12,5 @@ class Solution:
                 high = mid
 
         return arr[low]  # Return the minimum value
+                
+        # code here
