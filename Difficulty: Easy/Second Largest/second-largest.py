@@ -1,17 +1,11 @@
 class Solution:
     def getSecondLargest(self, arr):
-        max_ele = float("-inf")
-        second_max = float("-inf")
-        
+        max1=float('-inf')
+        max2=float('-inf')
         for i in arr:
-            if i > max_ele:
-                second_max = max_ele
-                max_ele = i
-            elif i > second_max and i != max_ele:
-                second_max = i
-        
-        # If there is no second largest element (like all elements same)
-        if second_max == float("-inf"):
-            return -1
-        return second_max
-        # Code Here
+            if i>max1:
+                max2=max1
+                max1=i
+            elif i>max2 and i!=max1:
+                max2=i
+        return max2 if max2!=float('-inf') else -1
