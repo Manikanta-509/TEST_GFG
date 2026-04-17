@@ -1,17 +1,14 @@
-#User function Template for python3
-
 class Solution:
-
-    def findMinDiff(self, arr,M):
+    def findMinDiff(self, arr, m):
         n=len(arr)
-        if M>n:
+        if m>n:
             return False
-        arr.sort()
         min_diff=float("inf")
-        for i in range(n-M+1):
-            diff=arr[i+M-1]-arr[i]
-            min_diff=min(diff,min_diff)
+        arr.sort()
+        for i in  range(n-m+1):
+            dff=arr[i+m-1]-arr[i]
+            min_diff=min(min_diff,dff)
         return min_diff
             
-
+            
         # code here
