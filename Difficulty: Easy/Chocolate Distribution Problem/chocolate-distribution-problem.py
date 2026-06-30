@@ -3,12 +3,13 @@ class Solution:
         n=len(arr)
         if m>n:
             return False
-        min_diff=float("inf")
         arr.sort()
-        for i in  range(n-m+1):
-            dff=arr[i+m-1]-arr[i]
-            min_diff=min(min_diff,dff)
+        min_diff=float("inf")
+        for i in range(n-m+1):
+            diff=arr[i+m-1]-arr[i]
+            min_diff=min(min_diff,diff)
         return min_diff
             
             
         # code here
+        
