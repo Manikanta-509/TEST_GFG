@@ -1,6 +1,5 @@
 class Solution:
     def majorityElement(self, arr):
-        n=len(arr)
         freq={}
         for i in arr:
             if i in freq:
@@ -8,8 +7,8 @@ class Solution:
             else:
                 freq[i]=1
         for key in freq:
-            if freq[key]>n//2:
+            if freq[key]>len(arr)//2:
                 return key
         return -1
-            
         #code here
+        
