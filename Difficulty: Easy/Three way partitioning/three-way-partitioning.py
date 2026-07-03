@@ -1,5 +1,3 @@
-#User function template for Python
-
 class Solution:
     #Function to partition the array around the range such 
     #that array is divided into three parts.
@@ -10,12 +8,14 @@ class Solution:
 	    while mid<=high:
 	        if arr[mid]<a:
 	            arr[low],arr[mid]=arr[mid],arr[low]
-	            mid+=1
 	            low+=1
-	        elif arr[mid]>b:
-	            arr[mid],arr[high]=arr[high],arr[mid]
-	            high-=1
-	        else:
 	            mid+=1
-	        
+	        elif  arr[mid]<=b:
+	            mid+=1
+	        else:
+	            arr[high],arr[mid]=arr[mid],arr[high]
+	            high-=1
+	    return arr
+
 	    # code here 
+	    
