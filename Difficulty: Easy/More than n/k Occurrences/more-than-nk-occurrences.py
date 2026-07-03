@@ -1,20 +1,18 @@
-#User function Template for python3
-
-
 class Solution:
-    def countOccurence(self, arr, k):
-        n=len(arr)
+    
+    #Function to find all elements in array that appear more than n/k times.
+    def countOccurence(self,arr, k):
         freq={}
-        for num in arr:
-            if num in freq:
-                freq[num]+=1
+        for i in arr:
+            if i in freq:
+                freq[i]+=1
             else:
-                freq[num]=1
-        count=0
+                freq[i]=1
+        total=0
+        n=len(arr)
         for key in freq:
             if freq[key]>n//k:
-                count+=1
-        return count
-            
-        
+                total+=1
+        return total
         #Your code here
+        
