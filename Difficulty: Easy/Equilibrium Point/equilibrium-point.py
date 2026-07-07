@@ -1,12 +1,13 @@
 class Solution:
     def findEquilibrium(self, arr):
-        total_sum=sum(arr)
-        left_sum=0
+        left=0
+        total=sum(arr)
         for i in range(len(arr)):
-            total_sum-=arr[i]
-            if left_sum==total_sum:
+            total-=arr[i]
+            if total==left:
                 return i
-            left_sum+=arr[i]
+            left+=arr[i]
         return -1
+            
         # code here
 
