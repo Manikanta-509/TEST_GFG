@@ -2,24 +2,20 @@
 from typing import List
 
 
-from typing import List
-
 class Solution:
     def findPair(self, arr: List[int], x: int) -> int:
-        s = set()
-
-        for num in arr:
-            if (num + x) in s or (num - x) in s:
+        arr.sort()
+        left=0
+        right=1
+        while right<len(arr):
+            if left==right:
+                right+=1
+                continue
+            diff=arr[right]-arr[left]
+            if diff==x:
                 return True
-            s.add(num)
-
+            elif diff<x:
+                right+=1
+            else:
+                left+=1
         return False
-                
-
-
-        
-
-
-        
-        # code here
-        
