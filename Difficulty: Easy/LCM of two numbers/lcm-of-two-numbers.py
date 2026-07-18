@@ -8,4 +8,3 @@ class Solution:
         gcd=a
         lcm=(x*y)//gcd
         return lcm
-        # code here
