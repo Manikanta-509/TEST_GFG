@@ -1,14 +1,13 @@
 class Solution:
     def isPalindrome(self, n):
-        original = abs(n)
-        n = abs(n)
-
-        rev = 0
-
-        while n > 0:
-            digit = n % 10
-            rev = rev * 10 + digit
-            n //= 10
-
-        return rev == original
-		
+        sign=-1 if n<0 else 1
+        n=abs(n)
+        org=n
+        rev=0
+        while n!=0:
+            digit=n%10
+            rev=(rev*10+digit)
+            n=n//10
+        rev=rev*sign
+        org=org*sign
+        return rev==org
