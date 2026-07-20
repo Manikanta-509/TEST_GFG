@@ -1,16 +1,15 @@
 class Solution:
-    def duplicates(self, arr):
-        seen = set()
-        for i in arr:
-            if i in seen:
-                return i
-            seen.add(i)
     def findTwoElement(self, arr):
-        n = len(arr)
-        duplicate = self.duplicates(arr)
-        total = n * (n + 1) // 2
-        actual_sum = sum(arr)
-        missing = total - (actual_sum - duplicate)
-        return [duplicate, missing]
+        rep=miss=0
+        freq=[0]*(len(arr)+1)
+        for i in arr:
+            freq[i]+=1
+        for i in range(1,len(arr)+1):
+            if freq[i]==0:
+                miss=i
+            elif freq[i]>1:
+                rep=i
+        return [rep,miss]
+            
         # code here
 
