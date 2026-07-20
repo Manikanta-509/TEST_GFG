@@ -6,9 +6,8 @@ class Solution:
                 freq[i]+=1
             else:
                 freq[i]=1
-        for key in freq:
-            if freq[key]>len(arr)//2:
-                return key
+        for i in freq:
+            if freq[i]>len(arr)//2:
+                return i
         return -1
-        #code here
         
