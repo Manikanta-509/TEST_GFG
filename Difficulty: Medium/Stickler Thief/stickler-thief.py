@@ -1,10 +1,9 @@
 class Solution:  
     def findMaxSum(self, arr):
-        incl=0
-        excul=0
+        include=0
+        exclude=0
         for i in arr:
-            new_incl=max(incl,excul)
-            incl=i+excul
-            excul=new_incl
-        return max(incl,excul)
-        
+            new_include=max(include,exclude)
+            include=i+exclude
+            exclude=new_include
+        return max(include,exclude)
