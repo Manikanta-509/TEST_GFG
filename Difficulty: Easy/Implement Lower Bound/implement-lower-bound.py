@@ -6,9 +6,10 @@ class Solution:
         while low<=high:
             mid=(low+high)//2
             if arr[mid]>=target:
-                ans=mid
+                ans= mid
                 high=mid-1
             else:
                 low=mid+1
         return ans
+        
             
