@@ -1,11 +1,13 @@
 class Solution:
     def findMin(self, arr):
-        min_ele=arr[0]
-        for i in range(1,len(arr)):
-            if arr[i]<min_ele:
-                min_ele=arr[i]
-        return min_ele
-        # Return the minimum value
-                
         # code here
+        low=0
+        high=len(arr)-1
+        while low<high:
+            mid=(low+high)//2
+            if arr[mid]>arr[high]:
+                low=mid+1
+            else:
+                high=mid
+        return arr[low]
         
