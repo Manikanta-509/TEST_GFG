@@ -1,10 +1,15 @@
-#User function Template for python3
-
 class Solution:
     def rotate(self, arr):
-        if len(arr)>1:
-            last=arr.pop()
-            arr.insert(0,last)
+        n=len(arr)
+        if n==0:
+            return False
+        last=arr[-1]
+        for i in range(n-1,-1,-1):
+            arr[i]=arr[i-1]
+        arr[0]=last
         return arr
+            
         
+                
+            
     
